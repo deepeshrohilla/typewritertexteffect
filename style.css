@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(pexels-josh-sorenson-1714208.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000268e7;
+}
+
+.typewriter h1 {
+    border-right: 2px solid #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    font-size: 5em;
+    font-family: sans-serif;
+    animation: typewriter 6s steps(50, end) infinite;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .typewriter h1 {
+        font-size: 2em;
+    }
+}
